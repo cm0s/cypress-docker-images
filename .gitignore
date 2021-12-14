@@ -5,3 +5,4 @@ test/src/.Trash-0/
 **/cypress/screenshots
 **/cypress/logs
 node_modules/
+.idea/
