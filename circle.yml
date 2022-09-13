@@ -428,24 +428,24 @@ workflows:
         jobs:
             - lint-markdown
             - test
-    build-included-images:
+    build-base-images:
         jobs:
-            - build-included-image:
-                name: "build+test included 10.7.0-node14.19.3-chrome105-ff104 arm64"
-                dockerTag: "10.7.0-node14.19.3-chrome105-ff104"
+            - build-base-image:
+                name: "build+test base 14.19.3 arm64"
+                dockerTag: "14.19.3"
                 resourceClass: arm.large
                 platformArg: linux/arm64
-            - build-included-image:
-                name: "build+test included 10.7.0-node14.19.3-chrome105-ff104 x64"
-                dockerTag: "10.7.0-node14.19.3-chrome105-ff104"
+            - build-base-image:
+                name: "build+test base 14.19.3 x64"
+                dockerTag: "14.19.3"
                 resourceClass: large
                 platformArg: linux/amd64
             - push-images:
-                name: "push included 10.7.0-node14.19.3-chrome105-ff104 images"
-                dockerName: 'cypress/included'
-                dockerTag: '10.7.0-node14.19.3-chrome105-ff104'
-                workingDirectory: '~/project/included/10.7.0-node14.19.3-chrome105-ff104'
+                name: "push base 14.19.3 images"
+                dockerName: 'cypress/base'
+                dockerTag: '14.19.3'
+                workingDirectory: '~/project/base/14.19.3'
                 context: test-runner:docker-push
                 requires:
-                    - "build+test included 10.7.0-node14.19.3-chrome105-ff104 arm64"
-                    - "build+test included 10.7.0-node14.19.3-chrome105-ff104 x64"
+                    - "build+test base 14.19.3 arm64"
+                    - "build+test base 14.19.3 x64"

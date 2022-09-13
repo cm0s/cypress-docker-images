@@ -83,3 +83,4 @@
 <div id="note1">
 
 **1:** this image includes fonts with Chinese characters
+| cypress/base:14.19.3 | 14.19.3 | Debian | [/14.19.3](14.19.3) | `🚫` | `🚫` | `🚫` |
