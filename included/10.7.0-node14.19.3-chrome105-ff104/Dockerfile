@@ -5,7 +5,7 @@
 # build this image with command
 #   docker build -t cypress/included:10.7.0-node14.19.3-chrome105-ff104 .
 #
-FROM cypress/browsers:node14.19.3-chrome105-ff104
+FROM nexus.unige.ch:445/cypress/browsers:node14.19.3-chrome105-ff104
 
 # avoid too many progress messages
 # https://github.com/cypress-io/cypress/issues/1243

@@ -6,7 +6,7 @@
 #   docker build -t cypress/browsers:node14.19.3-chrome105-ff104 .
 #
 #
-FROM cypress/base:14.19.3
+FROM nexus.unige.ch:445/cypress/base:14.19.3
 
 USER root
 
